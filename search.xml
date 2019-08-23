@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Typora基本使用</title>
+      <link href="/2019/08/23/typora-ji-ben-shi-yong/"/>
+      <url>/2019/08/23/typora-ji-ben-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<p><code>Ctrl 0</code>到 <code>Ctrl4</code> : 普通文本一级~四级标题</p><p><code>Ctrl B</code> :加粗</p><p><strong>我是加粗的文字</strong></p><p><code>Ctrl I</code> :斜体</p><p><em>我是斜体的文字</em></p><p><code>Ctrl U</code> :下划线</p><p><u>我是带下划线的文字</u></p><p><code>Ctrl K</code>:超链接</p><p><a href www.baidu.com"">我是超链接</a></p><p><code>Ctrl T</code>:表格</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table><p><code>shift+ctrl+Q</code>:引用</p><blockquote><p>我是引用的一段话</p></blockquote><p><code>shift+ctrl+I</code>:插入图片</p><p><img src="https://www.baidu.com/img/baidu_jgylogo3.gif" alt="baidu"></p><p>三个飘号：代码块</p><pre class=" language-javascript"><code class="language-javascript">我是代码块</code></pre><p>有序，无序列表：<code>*</code>，<code>+</code>，<code>-</code>，按<code>tab</code>键可以切换二级列表</p><ul><li>一级列表1</li><li>一级列表2<ul><li>二级列表1</li><li>二级列表2</li></ul></li></ul><p>上标：<code>^上标^</code></p><p>​    2^2^</p><p>下标：<code>~下标~</code></p><p>​    H<del>2</del>O</p><p>高亮：<code>==高亮字==</code></p><p>​    ==我是高亮的字==</p><p>分割线：<code>---</code></p><hr><p>emoji图片：<code>:</code></p><p>​    :arrow_up:</p><p>目录生成：<code>[toc]</code></p><p>[TOC]</p><p>流程图：<code>Flowchart</code>，<code>Mermaid</code></p><ul><li><p>流程图：Flowchart</p><pre class=" language-flow"><code class="language-flow"></code></pre></li></ul><ul><li><p>流程图：Mermaid</p><pre class=" language-mermaid"><code class="language-mermaid"></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Typora </tag>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

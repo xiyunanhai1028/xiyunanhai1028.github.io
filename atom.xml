@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://xiyunanhai1028.github.io/"/>
+  <updated>2019-08-23T08:47:50.310Z</updated>
+  <id>https://xiyunanhai1028.github.io/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Typora基本使用</title>
+    <link href="https://xiyunanhai1028.github.io/2019/08/23/typora-ji-ben-shi-yong/"/>
+    <id>https://xiyunanhai1028.github.io/2019/08/23/typora-ji-ben-shi-yong/</id>
+    <published>2019-08-23T08:43:53.000Z</published>
+    <updated>2019-08-23T08:47:50.310Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;code&gt;Ctrl 0&lt;/code&gt;到 &lt;code&gt;Ctrl4&lt;/code&gt; : 普通文本一级~四级标题&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl B&lt;/code&gt; :加粗&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我是加粗的文字&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl
+        
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://xiyunanhai1028.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Typora" scheme="https://xiyunanhai1028.github.io/tags/Typora/"/>
+    
+      <category term="工具" scheme="https://xiyunanhai1028.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+</feed>
