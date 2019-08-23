@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Flutter学习</title>
+      <link href="/2019/08/23/flutter-xue-xi/"/>
+      <url>/2019/08/23/flutter-xue-xi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-Text组件"><a href="#1-Text组件" class="headerlink" title="1.    Text组件"></a>1.    Text组件</h3><table><thead><tr><th align="center">名称</th><th align="center">功能</th></tr></thead><tbody><tr><td align="center">textAlign</td><td align="center">文本对齐方式（center:居中，left：居左，right:居右，justfy:两端对齐）</td></tr><tr><td align="center">textDirection</td><td align="center">文本方向（ltr：从左到右，rtl:从右到左）</td></tr><tr><td align="center">overflow</td><td align="center">文字超出屏幕之后的处理方式（clip:裁剪，fade:隐藏，ellipsis:省略号）</td></tr><tr><td align="center">textScaleFactor</td><td align="center">文字显示倍率</td></tr><tr><td align="center">maxLines</td><td align="center">文字显示最大行数</td></tr><tr><td align="center">style</td><td align="center">文字的样式设置</td></tr></tbody></table><h4 id="1-1-TextStyle"><a href="#1-1-TextStyle" class="headerlink" title="1.1 TextStyle"></a>1.1 TextStyle</h4><table><thead><tr><th align="center">名称</th><th align="center">功能</th></tr></thead><tbody><tr><td align="center">decoration</td><td align="center">文字装饰线（none:没有线，lineThrough：删除线，overline：上划线，underline：下划线）</td></tr><tr><td align="center">decorationColor</td><td align="center">文字装饰线的颜色</td></tr><tr><td align="center">decorationStyle</td><td align="center">文字装饰线风格（[dashed,dotted]）虚线，double两根线，solid一根线，wavy波浪线</td></tr><tr><td align="center">wordSpacing</td><td align="center">单词间隙（如果为负数，会让单词变得更紧凑）</td></tr><tr><td align="center">letterSpacing</td><td align="center">字母间隙（如果是负数，会让字母变得更紧凑）</td></tr><tr><td align="center">fontStyle</td><td align="center">文字样式（italic斜体，normal正常体）</td></tr><tr><td align="center">fontSize</td><td align="center">字体大小</td></tr><tr><td align="center">color</td><td align="center">字体颜色</td></tr><tr><td align="center">fontWeight</td><td align="center">字体粗细（bold粗体，normal正常）</td></tr></tbody></table><h3 id="2-Container组件"><a href="#2-Container组件" class="headerlink" title="2.    Container组件"></a>2.    Container组件</h3><table><thead><tr><th>名称</th><th>功能</th></tr></thead><tbody><tr><td>alignment</td><td>topCenter：顶部居中对齐；topLeft：顶部左对齐；topRight:顶部右对齐；center：水平垂直居中对齐；centerLeft：垂直居中水平居中对齐；centerRight:垂直居中水平居右对齐；bottomCenter:底部居中对齐；bottomLeft：对不局左对齐；bottomRight：底部居右对齐</td></tr><tr><td>decoration</td><td>BoxDecoration,color,border,borderRadius</td></tr><tr><td>margin</td><td>margin属性表示Container与外部其他组件的距离。EdgeInsets.all()</td></tr><tr><td>padding</td><td>padding是COntainer的内边距，值得是Container边缘与child之间的距离</td></tr><tr><td>transform</td><td>让Container容易进行一些旋转之类的操作；transform:Matrix4.rotationZ(0.2)</td></tr><tr><td>heigth</td><td>Container的高度</td></tr><tr><td>width</td><td>Container宽度</td></tr><tr><td>child</td><td>Container 子元素</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> Flutter </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Flutter </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Typora基本使用</title>
       <link href="/2019/08/23/typora-ji-ben-shi-yong/"/>
       <url>/2019/08/23/typora-ji-ben-shi-yong/</url>

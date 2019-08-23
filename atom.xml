@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiyunanhai1028.github.io/"/>
-  <updated>2019-08-23T08:47:50.310Z</updated>
+  <updated>2019-08-23T09:34:54.319Z</updated>
   <id>https://xiyunanhai1028.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter学习</title>
+    <link href="https://xiyunanhai1028.github.io/2019/08/23/flutter-xue-xi/"/>
+    <id>https://xiyunanhai1028.github.io/2019/08/23/flutter-xue-xi/</id>
+    <published>2019-08-23T09:30:26.000Z</published>
+    <updated>2019-08-23T09:34:54.319Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-Text组件&quot;&gt;&lt;a href=&quot;#1-Text组件&quot; class=&quot;headerlink&quot; title=&quot;1.    Text组件&quot;&gt;&lt;/a&gt;1.    Text组件&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th
+        
+      
+    
+    </summary>
+    
+      <category term="Flutter" scheme="https://xiyunanhai1028.github.io/categories/Flutter/"/>
+    
+    
+      <category term="Flutter" scheme="https://xiyunanhai1028.github.io/tags/Flutter/"/>
+    
+  </entry>
   
   <entry>
     <title>Typora基本使用</title>
