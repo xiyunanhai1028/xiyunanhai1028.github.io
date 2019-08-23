@@ -546,6 +546,50 @@ textDirection
 <td>Container 子元素</td>
 </tr>
 </tbody></table>
+<h3 id="3-图像组件"><a href="#3-图像组件" class="headerlink" title="3. 图像组件"></a>3. 图像组件</h3><blockquote>
+<p>Image组件有很多构造函数</p>
+<p>Image.asset:本地图片</p>
+<p>Image.network:远程图片</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">类型</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">alignment</td>
+<td align="center">Alignment</td>
+<td align="center">图片对齐方式</td>
+</tr>
+<tr>
+<td align="center">color&amp;colorBlendMode</td>
+<td align="center"></td>
+<td align="center">设置图片的背景颜色，通常和colorBlendMode配合一直使用，这样可以使图片的颜色和背景色混合。</td>
+</tr>
+<tr>
+<td align="center">fit</td>
+<td align="center">BoxFit</td>
+<td align="center">fit属性用来控制图片的拉伸和挤压，这都是根据父容器来的。BoxFit.fill:全图显示，图片会被拉伸，并充满父容器；BoxFit.contain:全图显示，显示原比例，可能会有空隙；BoxFit.cover:显示可拉伸，可能裁切，充满（图片要充满整个容器，还不变形）;BoxFir.fitWidth:宽度充满（横向充满），显示可能拉伸，可能裁切；BoxFit.fitHeight:高度充满（竖向充满），显示可能拉伸，可能裁切；BoxFit.scaleDown:效果和contain差不多，但是此属性不允许显示超过原图片大小，可小不可大</td>
+</tr>
+<tr>
+<td align="center">repeat</td>
+<td align="center">平铺</td>
+<td align="center">ImageRepeat.repeat:横向和纵向都进行重复，直到铺满整个画布；ImageRepeat.repeatX:横向重复，纵向不重复；ImageRepeat.repeatY:纵向重复，横向不重复</td>
+</tr>
+<tr>
+<td align="center">width</td>
+<td align="center"></td>
+<td align="center">宽度  一般结合ClipOval 才能看效果</td>
+</tr>
+<tr>
+<td align="center">height</td>
+<td align="center"></td>
+<td align="center">高度 一般结合ClipOval 才能看到效果</td>
+</tr>
+</tbody></table>
 
             </div>
             <hr/>
