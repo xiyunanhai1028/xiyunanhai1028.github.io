@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiyunanhai1028.github.io/"/>
-  <updated>2019-08-23T09:55:33.377Z</updated>
+  <updated>2019-08-26T06:46:27.127Z</updated>
   <id>https://xiyunanhai1028.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rxjava总结</title>
+    <link href="https://xiyunanhai1028.github.io/2019/08/26/rxjava-zong-jie/"/>
+    <id>https://xiyunanhai1028.github.io/2019/08/26/rxjava-zong-jie/</id>
+    <published>2019-08-26T06:43:44.000Z</published>
+    <updated>2019-08-26T06:46:27.127Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;环境配置&quot;&gt;&lt;a href=&quot;#环境配置&quot; class=&quot;headerlink&quot; title=&quot;环境配置&quot;&gt;&lt;/a&gt;环境配置&lt;/h3&gt;&lt;pre class=&quot; language-java&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="rxandroid" scheme="https://xiyunanhai1028.github.io/categories/rxandroid/"/>
+    
+    
+      <category term="android" scheme="https://xiyunanhai1028.github.io/tags/android/"/>
+    
+      <category term="rxandroid" scheme="https://xiyunanhai1028.github.io/tags/rxandroid/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter学习</title>
