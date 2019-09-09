@@ -509,47 +509,47 @@ textDirection
 <h3 id="2-Container组件"><a href="#2-Container组件" class="headerlink" title="2.    Container组件"></a>2.    Container组件</h3><table>
 <thead>
 <tr>
-<th>名称</th>
-<th>功能</th>
+<th align="center">名称</th>
+<th align="center">功能</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>alignment</td>
-<td>topCenter：顶部居中对齐；topLeft：顶部左对齐；topRight:顶部右对齐；center：水平垂直居中对齐；centerLeft：垂直居中水平居中对齐；centerRight:垂直居中水平居右对齐；bottomCenter:底部居中对齐；bottomLeft：对不局左对齐；bottomRight：底部居右对齐</td>
+<td align="center">alignment</td>
+<td align="center">topCenter：顶部居中对齐；topLeft：顶部左对齐；topRight:顶部右对齐；center：水平垂直居中对齐；centerLeft：垂直居中水平居中对齐；centerRight:垂直居中水平居右对齐；bottomCenter:底部居中对齐；bottomLeft：对不局左对齐；bottomRight：底部居右对齐</td>
 </tr>
 <tr>
-<td>decoration</td>
-<td>BoxDecoration,color,border,borderRadius</td>
+<td align="center">decoration</td>
+<td align="center">BoxDecoration,color,border,borderRadius</td>
 </tr>
 <tr>
-<td>margin</td>
-<td>margin属性表示Container与外部其他组件的距离。EdgeInsets.all()</td>
+<td align="center">margin</td>
+<td align="center">margin属性表示Container与外部其他组件的距离。EdgeInsets.all()</td>
 </tr>
 <tr>
-<td>padding</td>
-<td>padding是COntainer的内边距，值得是Container边缘与child之间的距离</td>
+<td align="center">padding</td>
+<td align="center">padding是Container的内边距，指的是Container边缘与child之间的距离</td>
 </tr>
 <tr>
-<td>transform</td>
-<td>让Container容易进行一些旋转之类的操作；transform:Matrix4.rotationZ(0.2)</td>
+<td align="center">transform</td>
+<td align="center">让Container容易进行一些旋转之类的操作；transform:Matrix4.rotationZ(0.2)</td>
 </tr>
 <tr>
-<td>heigth</td>
-<td>Container的高度</td>
+<td align="center">heigth</td>
+<td align="center">Container的高度</td>
 </tr>
 <tr>
-<td>width</td>
-<td>Container宽度</td>
+<td align="center">width</td>
+<td align="center">Container宽度</td>
 </tr>
 <tr>
-<td>child</td>
-<td>Container 子元素</td>
+<td align="center">child</td>
+<td align="center">Container 子元素</td>
 </tr>
 </tbody></table>
-<h3 id="3-图像组件"><a href="#3-图像组件" class="headerlink" title="3. 图像组件"></a>3. 图像组件</h3><blockquote>
-<p>Image组件有很多构造函数</p>
-<p>Image.asset:本地图片</p>
-<p>Image.network:远程图片</p>
+<h3 id="3-Image图片组件"><a href="#3-Image图片组件" class="headerlink" title="3.    Image图片组件"></a>3.    Image图片组件</h3><blockquote>
+<p>image.asset</p>
+<p>image.network</p>
+<p>image.file</p>
 </blockquote>
 <table>
 <thead>
@@ -562,32 +562,1066 @@ textDirection
 <tbody><tr>
 <td align="center">alignment</td>
 <td align="center">Alignment</td>
-<td align="center">图片对齐方式</td>
+<td align="center">图片对其方式</td>
 </tr>
 <tr>
-<td align="center">color&amp;colorBlendMode</td>
+<td align="center">color和colorBlendMode</td>
 <td align="center"></td>
-<td align="center">设置图片的背景颜色，通常和colorBlendMode配合一直使用，这样可以使图片的颜色和背景色混合。</td>
+<td align="center">设置图片的背景颜色，通常和colorBlendMode一起使用，这样可以使图片颜色跟背景颜色混合</td>
 </tr>
 <tr>
 <td align="center">fit</td>
 <td align="center">BoxFit</td>
-<td align="center">fit属性用来控制图片的拉伸和挤压，这都是根据父容器来的。BoxFit.fill:全图显示，图片会被拉伸，并充满父容器；BoxFit.contain:全图显示，显示原比例，可能会有空隙；BoxFit.cover:显示可拉伸，可能裁切，充满（图片要充满整个容器，还不变形）;BoxFir.fitWidth:宽度充满（横向充满），显示可能拉伸，可能裁切；BoxFit.fitHeight:高度充满（竖向充满），显示可能拉伸，可能裁切；BoxFit.scaleDown:效果和contain差不多，但是此属性不允许显示超过原图片大小，可小不可大</td>
+<td align="center">fit属性用来控制拉伸与挤压，是相对于父容器的。BoxFit.fill:拉伸图片，充满父容器；BoxFit.contain:原比例拉伸，可能用空隙；BoxFit.cover:图片原比例充满父容器，多余的会被裁剪；BoxFit.fitWidth:充满父容器宽度；BoxFit.fitHeight:充满父容器高度；BoxFit.scaleDown:效果跟contain一样，但是此属性不允许显示超过源图片大小，可小不可大</td>
 </tr>
 <tr>
 <td align="center">repeat</td>
 <td align="center">平铺</td>
-<td align="center">ImageRepeat.repeat:横向和纵向都进行重复，直到铺满整个画布；ImageRepeat.repeatX:横向重复，纵向不重复；ImageRepeat.repeatY:纵向重复，横向不重复</td>
+<td align="center">ImageRepeat.repeat:原图位置为中心，向其他地方铺满容器；ImageRepeat.repeatX:原图位置为中心，在X轴方向铺满容器；ImageRepeat.repeatY:原图位置为中心，在Y轴方向铺满容器；</td>
 </tr>
 <tr>
 <td align="center">width</td>
 <td align="center"></td>
-<td align="center">宽度  一般结合ClipOval 才能看效果</td>
+<td align="center">宽度 一般结合 ClipOval 才能看到效果</td>
 </tr>
 <tr>
 <td align="center">height</td>
 <td align="center"></td>
-<td align="center">高度 一般结合ClipOval 才能看到效果</td>
+<td align="center">高度 一般结合 ClipOval 才能看到效果</td>
+</tr>
+</tbody></table>
+<h3 id="4-ListView列表"><a href="#4-ListView列表" class="headerlink" title="4.    ListView列表"></a>4.    ListView列表</h3><ul>
+<li>垂直列表</li>
+<li>水平列表</li>
+<li>垂直图文列表</li>
+<li>动态列表</li>
+<li>矩阵列表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">类型</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">scrollDirection</td>
+<td align="center">Axis</td>
+<td align="center">Axis.Vertical:垂直类别；Axis.Horizontal:水平列表</td>
+</tr>
+<tr>
+<td align="center">padding</td>
+<td align="center">EdgetInsetsGeometory</td>
+<td align="center">内边距</td>
+</tr>
+<tr>
+<td align="center">resolve</td>
+<td align="center">bool</td>
+<td align="center">是否倒叙</td>
+</tr>
+<tr>
+<td align="center">children</td>
+<td align="center">List<widget></widget></td>
+<td align="center">列表元素</td>
+</tr>
+</tbody></table>
+<h3 id="5-GridView网格"><a href="#5-GridView网格" class="headerlink" title="5.    GridView网格"></a>5.    GridView网格</h3><ul>
+<li>垂直列表</li>
+<li>水平列表</li>
+<li>垂直图文列表</li>
+<li>动态列表</li>
+<li>矩阵列表</li>
+</ul>
+<blockquote>
+<p>GridView.builder</p>
+<p>GridView.count</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>scrollDirection</td>
+<td>Axis</td>
+<td>Axis.Vertical:垂直类别；Axis.Horizontal:水平列表</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>EdgetInsetsGeometory</td>
+<td>内边距</td>
+</tr>
+<tr>
+<td>resolve</td>
+<td>bool</td>
+<td>是否倒叙</td>
+</tr>
+<tr>
+<td>children</td>
+<td>List<widget></widget></td>
+<td>列表元素</td>
+</tr>
+<tr>
+<td>crossAxisSpacing</td>
+<td>double</td>
+<td>水平子widget之间的间距</td>
+</tr>
+<tr>
+<td>mainAxisSpacing</td>
+<td>double</td>
+<td>垂直子widget之间的间距</td>
+</tr>
+<tr>
+<td>crossAxisCount</td>
+<td>int</td>
+<td>一行widget的数量</td>
+</tr>
+<tr>
+<td>childAspectRatio</td>
+<td>double</td>
+<td>子widget宽度比例</td>
+</tr>
+<tr>
+<td>gridDelegate</td>
+<td>SliverGridDelegateWithFixedCrossAxisCount（常用）SliverGridDelegateWithMaxCrossAxisExtent</td>
+<td>控制布局主要用在GridView.builder里面</td>
+</tr>
+</tbody></table>
+<h3 id="6-Padding组件"><a href="#6-Padding组件" class="headerlink" title="6.    Padding组件"></a>6.    Padding组件</h3><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">padding</td>
+<td align="center">padding 值, EdgeInsetss 设置填充的值</td>
+</tr>
+<tr>
+<td align="center">child</td>
+<td align="center">子组件</td>
+</tr>
+</tbody></table>
+<h3 id="7-Row水平布局组件"><a href="#7-Row水平布局组件" class="headerlink" title="7. Row水平布局组件"></a>7. Row水平布局组件</h3><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">mainAxisAlignment</td>
+<td align="center">主轴的排序方式</td>
+</tr>
+<tr>
+<td align="center">crossAxisAlignment</td>
+<td align="center">次轴的排序方式</td>
+</tr>
+<tr>
+<td align="center">children</td>
+<td align="center">子元素</td>
+</tr>
+</tbody></table>
+<h3 id="8-Column垂直布局组件"><a href="#8-Column垂直布局组件" class="headerlink" title="8.    Column垂直布局组件"></a>8.    Column垂直布局组件</h3><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">mainAxisAlignment</td>
+<td align="center">主轴的排序方式</td>
+</tr>
+<tr>
+<td align="center">crossAxisAlignment</td>
+<td align="center">次轴的排序方式</td>
+</tr>
+<tr>
+<td align="center">children</td>
+<td align="center">子元素</td>
+</tr>
+</tbody></table>
+<h3 id="9-Expanded"><a href="#9-Expanded" class="headerlink" title="9.    Expanded"></a>9.    Expanded</h3><blockquote>
+<p>类似于web中的flex布局，Expanded可用在Row，Column中</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">flex</td>
+<td align="center">元素占整个Row/Column的比例</td>
+</tr>
+<tr>
+<td align="center">child</td>
+<td align="center">子元素</td>
+</tr>
+</tbody></table>
+<h3 id="10-Stack组件"><a href="#10-Stack组件" class="headerlink" title="10.    Stack组件"></a>10.    Stack组件</h3><blockquote>
+<p>Stack栈的意思，用Stack或Stack结合Align或者Stack结合Positiond来实现定位</p>
+</blockquote>
+<h4 id="10-1-Stack"><a href="#10-1-Stack" class="headerlink" title="10.1    Stack"></a>10.1    Stack</h4><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">alignment</td>
+<td align="center">配置所有子元素显示的位置</td>
+</tr>
+<tr>
+<td align="center">children</td>
+<td align="center">子组件</td>
+</tr>
+</tbody></table>
+<h4 id="10-2-Align"><a href="#10-2-Align" class="headerlink" title="10.2    Align"></a>10.2    Align</h4><blockquote>
+<p>Stack 组件中结合 Align 组件可以控制每个子元素的显示位置</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">alignment</td>
+<td align="center">配置所有子元素显示的位置</td>
+</tr>
+<tr>
+<td align="center">child</td>
+<td align="center">子组件</td>
+</tr>
+</tbody></table>
+<h4 id="10-3-Positiond"><a href="#10-3-Positiond" class="headerlink" title="10.3 Positiond"></a>10.3 Positiond</h4><blockquote>
+<p>Stack 组件中结合 Positioned 组件也可以控制每个子元素的显示位置</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">top</td>
+<td align="center">子元素距离顶部的距离</td>
+</tr>
+<tr>
+<td align="center">bottom</td>
+<td align="center">子元素距离底部的距离</td>
+</tr>
+<tr>
+<td align="center">left</td>
+<td align="center">子元素距离左侧的距离</td>
+</tr>
+<tr>
+<td align="center">right</td>
+<td align="center">子元素距离右侧的距离</td>
+</tr>
+<tr>
+<td align="center">child</td>
+<td align="center">子组件</td>
+</tr>
+</tbody></table>
+<h3 id="11-AspeactRatio组件"><a href="#11-AspeactRatio组件" class="headerlink" title="11.    AspeactRatio组件"></a>11.    AspeactRatio组件</h3><ul>
+<li><p>AspectRatio 的作用是根据设置调整子元素 child 的宽高比</p>
+</li>
+<li><p>AspectRatio 首先会在布局限制条件允许的范围内尽可能的扩展，widget 的高度是由宽 </p>
+<p>度和比率决定的，类似于 BoxFit 中的 contain，按照固定比率去尽量占满区域</p>
+</li>
+<li><p>如果在满足所有限制条件过后无法找到一个可行的尺寸，AspectRatio 最终将会去优先 </p>
+<p>适应布局限制条件，而忽略所设置的比率</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">AspeactRatio</td>
+<td align="center">宽高比，最终可能不会以这个值布局，具体要看综合因素。，外层是否允许按照这种比率进行布局，这只是一个参考值</td>
+</tr>
+<tr>
+<td align="center">child</td>
+<td align="center">子组件</td>
+</tr>
+</tbody></table>
+<h3 id="12-Card组件"><a href="#12-Card组件" class="headerlink" title="12.    Card组件"></a>12.    Card组件</h3><blockquote>
+<p>Card 是卡片组件块，内容可以由大多数类型的 Widget 构成，Card 具有圆角和阴影，这让它 </p>
+<p>看起来有立体感</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">margin</td>
+<td align="center">外边距</td>
+</tr>
+<tr>
+<td align="center">child</td>
+<td align="center">子组件</td>
+</tr>
+<tr>
+<td align="center">Shape</td>
+<td align="center">Card 的阴影效果，默认的阴影效果为圆角的</td>
+</tr>
+</tbody></table>
+<h3 id="13-RaisedButton组件"><a href="#13-RaisedButton组件" class="headerlink" title="13.    RaisedButton组件"></a>13.    RaisedButton组件</h3><blockquote>
+<p>Flutter通常用RaisedButton定义一个按钮</p>
+<p>Flutter 里有很多的 Button 组件很多，常见的按钮组件有：RaisedButton、FlatButton、 </p>
+<p>IconButton、OutlineButton、ButtonBar、FloatingActionButton 等。 </p>
+<p><strong>RaisedButton</strong> ：凸起的按钮，其实就是 Material Design 风格的 Button </p>
+<p><strong>FlatButton</strong> ：扁平化的按钮 </p>
+<p><strong>OutlineButton</strong>：线框按钮 </p>
+<p><strong>IconButton</strong> ：图标按钮 </p>
+<p><strong>ButtonBar</strong>:按钮组 </p>
+<p><strong>FloatingActionButton:</strong>浮动按钮</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onPressed</td>
+<td>VoidCallback ，一般接收一个方法</td>
+<td>必填参数，按下按钮时触发的回调，接收一个方法，传 null 表示按钮禁用，会显示禁用相关样式</td>
+</tr>
+<tr>
+<td>child</td>
+<td>Widget</td>
+<td>文本控件</td>
+</tr>
+<tr>
+<td>textColor</td>
+<td>Color</td>
+<td>文本颜色</td>
+</tr>
+<tr>
+<td>color</td>
+<td>Color</td>
+<td>按钮的颜色</td>
+</tr>
+<tr>
+<td>disabledColor</td>
+<td>Color</td>
+<td>按钮禁用时的颜色</td>
+</tr>
+<tr>
+<td>disabledTextColor</td>
+<td>Color</td>
+<td>按钮禁用时的文本颜色</td>
+</tr>
+<tr>
+<td>splashColor</td>
+<td>Color</td>
+<td>点击按钮时水波纹的颜色</td>
+</tr>
+<tr>
+<td>highlightColor</td>
+<td>Color</td>
+<td>点击（长按）按钮后按钮的颜色</td>
+</tr>
+<tr>
+<td>elevation</td>
+<td>double</td>
+<td>阴影的范围，值越大阴影范围越大</td>
+</tr>
+<tr>
+<td>padding</td>
+<td></td>
+<td>内边距</td>
+</tr>
+<tr>
+<td>shape</td>
+<td></td>
+<td>设置按钮的形状 shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(10),)</td>
+</tr>
+</tbody></table>
+<h3 id="14-Wrap组件"><a href="#14-Wrap组件" class="headerlink" title="14.    Wrap组件"></a>14.    Wrap组件</h3><blockquote>
+<p>Wrap 可以实现流布局，单行的 Wrap 跟 Row 表现几乎一致，单列的 Wrap 则跟 Row 表 </p>
+<p>现几乎一致。但 Row 与 Column 都是单行单列的，Wrap 则突破了这个限制，mainAxis 上空 </p>
+<p>间不足时，则向 crossAxis 上去扩展显示</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">direction</td>
+<td align="center">主轴方向，默认水平</td>
+</tr>
+<tr>
+<td align="center">alignment</td>
+<td align="center">主轴对其方式</td>
+</tr>
+<tr>
+<td align="center">spacing</td>
+<td align="center">主轴方向上的间距</td>
+</tr>
+<tr>
+<td align="center">textDirection</td>
+<td align="center">定义了Dirction的摆放顺序，默认是Down,</td>
+</tr>
+<tr>
+<td align="center">runAlignment</td>
+<td align="center">run 的对齐方式。run 可以理解为新的行或者列，如果是水平方向布局的话，run 可以理解为新的一行</td>
+</tr>
+<tr>
+<td align="center">runSpacing</td>
+<td align="center">run 的间距</td>
+</tr>
+</tbody></table>
+<h3 id="15-自定义组件"><a href="#15-自定义组件" class="headerlink" title="15.    自定义组件"></a>15.    自定义组件</h3><ul>
+<li><p>StatelessWidget:是无状态组件，状态不可变的 widget</p>
+</li>
+<li><p>StatefulWidget:是有状态组件，持有的状态可能在 widget 生命周期改变。通俗的讲：如果我 </p>
+<p>们想改变页面中的数据的话这个时候就需要用到 <strong>StatefulWidget</strong></p>
+</li>
+</ul>
+<h3 id="16-BottomNavigationBar组件"><a href="#16-BottomNavigationBar组件" class="headerlink" title="16.    BottomNavigationBar组件"></a>16.    BottomNavigationBar组件</h3><blockquote>
+<p>BottomNavigationBar 是底部导航条，可以让我们定义底部 Tab 切换，bottomNavigationBar </p>
+<p>是 Scaffold 组件的参数</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">items</td>
+<td align="center">List<bottomnavigationbaritem> 底部导航 条按钮集合</bottomnavigationbaritem></td>
+</tr>
+<tr>
+<td align="center">iconSize</td>
+<td align="center">icon</td>
+</tr>
+<tr>
+<td align="center">currentIndex</td>
+<td align="center">默认选中第几个</td>
+</tr>
+<tr>
+<td align="center">onTap</td>
+<td align="center">选中变化回调函数</td>
+</tr>
+<tr>
+<td align="center">fixedColor</td>
+<td align="center">选中的颜色</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">BottomNavigationBarType.fixed  BottomNavigationBarType.shifting</td>
+</tr>
+</tbody></table>
+<h3 id="17-路由"><a href="#17-路由" class="headerlink" title="17.    路由"></a>17.    路由</h3><blockquote>
+<p>Flutter 中的路由通俗的讲就是页面跳转。在 Flutter 中通过 Navigator 组件管理路由导航。 </p>
+<p>并提供了管理堆栈的方法。如：Navigator.push 和 Navigator.pop </p>
+<p>Flutter 中给我们提供了两种配置路由跳转的方式：1、基本路由 2、命名路由</p>
+</blockquote>
+<h4 id="17-1-基本路由"><a href="#17-1-基本路由" class="headerlink" title="17.1    基本路由"></a>17.1    基本路由</h4><blockquote>
+<p>比如我们现在想从 HomePage 组件跳转到 SearchPage 组件</p>
+</blockquote>
+<ul>
+<li><ol>
+<li>需要在 HomPage 中引入 SearchPage.dart</li>
+</ol>
+</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'../SearchPage.dart'</span><span class="token punctuation">;</span></code></pre>
+<ul>
+<li><ol start="2">
+<li>在HomePage中通过下面方式调整</li>
+</ol>
+</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token function">RaisedButton</span><span class="token punctuation">(</span>
+    child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"跳转到搜索页面"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        Navigator<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+            <span class="token function">MaterialPageRoute</span><span class="token punctuation">(</span>
+                builder<span class="token operator">:</span> <span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token function">SearchPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">)</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    color<span class="token operator">:</span> Theme<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span>accentColor<span class="token punctuation">,</span>
+    textTheme<span class="token operator">:</span> ButtonTextTheme<span class="token punctuation">.</span>primary
+<span class="token punctuation">)</span></code></pre>
+<ul>
+<li><ol start="3">
+<li>中的基本路由跳转传值</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>比如我们现在想从 HomePage 组件跳转到 SearchPage 组件传值</p>
+</blockquote>
+<pre class=" language-java"><code class="language-java"><span class="token function">RaisedButton</span><span class="token punctuation">(</span>
+    child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"跳转到搜索页面"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        Navigator<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+            <span class="token function">MaterialPageRoute</span><span class="token punctuation">(</span>
+                builder<span class="token operator">:</span> <span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token function">SearchPage</span><span class="token punctuation">(</span>title<span class="token operator">:</span><span class="token string">"表单"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//传值</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">)</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    color<span class="token operator">:</span> Theme<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span>accentColor<span class="token punctuation">,</span>
+    textTheme<span class="token operator">:</span> ButtonTextTheme<span class="token punctuation">.</span>primary
+<span class="token punctuation">)</span></code></pre>
+<h4 id="17-2-命名路由"><a href="#17-2-命名路由" class="headerlink" title="17.2    命名路由"></a>17.2    命名路由</h4><h5 id="17-2-1-配置路由"><a href="#17-2-1-配置路由" class="headerlink" title="17.2.1    配置路由"></a>17.2.1    配置路由</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token string">'pages/Tabs.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'pages/Search.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token string">'pages/Form.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">MyApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">class</span> <span class="token class-name">MyApp</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@override</span> Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span> 
+            <span class="token comment" spellcheck="true">// home:Tabs(), </span>
+            initialRoute<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+            routes<span class="token operator">:</span> <span class="token punctuation">{</span> 
+                <span class="token string">'/'</span><span class="token operator">:</span><span class="token punctuation">(</span>contxt<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token function">Tabs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                <span class="token string">'/search'</span><span class="token operator">:</span><span class="token punctuation">(</span>contxt<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token function">SearchPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                <span class="token string">'/form'</span><span class="token operator">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">FormPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+        <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span></code></pre>
+<h5 id="17-2-2-路由跳转"><a href="#17-2-2-路由跳转" class="headerlink" title="17.2.2    路由跳转"></a>17.2.2    路由跳转</h5><pre class=" language-java"><code class="language-java"><span class="token function">RaisedButton</span><span class="token punctuation">(</span> 
+    child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"跳转到搜索页面"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+        Navigator<span class="token punctuation">.</span><span class="token function">pushNamed</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token string">'/search'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    color<span class="token operator">:</span> Theme<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span>accentColor<span class="token punctuation">,</span> 
+    textTheme<span class="token operator">:</span> ButtonTextTheme<span class="token punctuation">.</span>primary
+<span class="token punctuation">)</span></code></pre>
+<h4 id="17-3-命名路由传值"><a href="#17-3-命名路由传值" class="headerlink" title="17.3    命名路由传值"></a>17.3    命名路由传值</h4><h5 id="17-3-1-配置路由"><a href="#17-3-1-配置路由" class="headerlink" title="17.3.1    配置路由"></a>17.3.1    配置路由</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token string">'pages/Tabs.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token string">'pages/Search.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token string">'pages/Form.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">MyApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">class</span> <span class="token class-name">MyApp</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">final</span> routes <span class="token operator">=</span> <span class="token punctuation">{</span> 
+        <span class="token string">'/'</span><span class="token operator">:</span> <span class="token punctuation">(</span>contxt<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">Tabs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+        <span class="token string">'/search'</span><span class="token operator">:</span> <span class="token punctuation">(</span>contxt<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">SearchPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+        <span class="token string">'/form'</span><span class="token operator">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token punctuation">{</span>arguments<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">FormPage</span><span class="token punctuation">(</span>arguments<span class="token operator">:</span> arguments<span class="token punctuation">)</span><span class="token punctuation">,</span>         
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@override</span> Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">return</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+            home<span class="token operator">:</span> <span class="token function">Tabs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            onGenerateRoute<span class="token operator">:</span> <span class="token punctuation">(</span>RouteSettings settings<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+                <span class="token comment" spellcheck="true">// 统一处理 </span>
+                <span class="token keyword">final</span> String name <span class="token operator">=</span> settings<span class="token punctuation">.</span>name<span class="token punctuation">;</span> 
+                <span class="token keyword">final</span> Function pageContentBuilder <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>routes<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span> 
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>pageContentBuilder <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>settings<span class="token punctuation">.</span>arguments <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+                        <span class="token keyword">final</span> Route route <span class="token operator">=</span> <span class="token function">MaterialPageRoute</span><span class="token punctuation">(</span> 
+                            builder<span class="token operator">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">pageContentBuilder</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> arguments<span class="token operator">:</span> settings<span class="token punctuation">.</span>arguments<span class="token punctuation">)</span>
+                        <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                        <span class="token keyword">return</span> route<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> 
+                        <span class="token keyword">final</span> Route route <span class="token operator">=</span> <span class="token function">MaterialPageRoute</span><span class="token punctuation">(</span> 
+                            builder<span class="token operator">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">pageContentBuilder</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">return</span> route<span class="token punctuation">;</span> 
+                    <span class="token punctuation">}</span> 
+                <span class="token punctuation">}</span> 
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span></code></pre>
+<h5 id="17-3-2-跳转传值"><a href="#17-3-2-跳转传值" class="headerlink" title="17.3.2    跳转传值"></a>17.3.2    跳转传值</h5><pre class=" language-java"><code class="language-java"><span class="token function">RaisedButton</span><span class="token punctuation">(</span> 
+    child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"跳转到表单演示页面"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+        Navigator<span class="token punctuation">.</span><span class="token function">pushNamed</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> 
+                            <span class="token string">'/form'</span><span class="token punctuation">,</span>arguments<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string">"id"</span><span class="token operator">:</span><span class="token number">20</span> <span class="token punctuation">}</span>
+                           <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    color<span class="token operator">:</span> Theme<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span>accentColor<span class="token punctuation">,</span>
+    textTheme<span class="token operator">:</span> ButtonTextTheme<span class="token punctuation">.</span>primary
+<span class="token punctuation">)</span></code></pre>
+<h5 id="17-3-3-接收参数"><a href="#17-3-3-接收参数" class="headerlink" title="17.3.3    接收参数"></a>17.3.3    <strong>接收参数</strong></h5><pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">class</span> <span class="token class-name">FormPage</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">final</span> Map arguments<span class="token punctuation">;</span> 
+    <span class="token function">FormPage</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>arguments<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token annotation punctuation">@override</span> Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">Scaffold</span><span class="token punctuation">(</span> 
+            appBar<span class="token operator">:</span> <span class="token function">AppBar</span><span class="token punctuation">(</span> title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"搜索"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            body<span class="token operator">:</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"我是一个表单页面 ${arguments != null ? arguments['id'] : '0'}"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span></code></pre>
+<h4 id="17-4-命名路单独抽离到一-个文件"><a href="#17-4-命名路单独抽离到一-个文件" class="headerlink" title="17.4    命名路单独抽离到一 个文件"></a>17.4    <strong>命名路单独抽离到一</strong> 个文件</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token string">'../pages/Tabs.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token string">'../pages/Search.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token string">'../pages/Form.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">final</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Function<span class="token operator">></span> routes <span class="token operator">=</span> <span class="token punctuation">{</span> 
+    <span class="token string">'/'</span><span class="token operator">:</span><span class="token punctuation">(</span>contxt<span class="token punctuation">,</span><span class="token punctuation">{</span>arguments<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token function">Tabs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token string">'/search'</span><span class="token operator">:</span><span class="token punctuation">(</span>contxt<span class="token punctuation">,</span><span class="token punctuation">{</span>arguments<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token function">SearchPage</span><span class="token punctuation">(</span>arguments<span class="token operator">:</span> arguments<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token string">'/form'</span><span class="token operator">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token punctuation">{</span>arguments<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token function">FormPage</span><span class="token punctuation">(</span>arguments<span class="token operator">:</span> arguments<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+var onGenerateRoute<span class="token operator">=</span><span class="token punctuation">(</span>RouteSettings settings<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token comment" spellcheck="true">// 统一处理 </span>
+    <span class="token keyword">final</span> String name <span class="token operator">=</span> settings<span class="token punctuation">.</span>name<span class="token punctuation">;</span> 
+    <span class="token keyword">final</span> Function pageContentBuilder <span class="token operator">=</span> routes<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pageContentBuilder <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">final</span> Route route <span class="token operator">=</span> <span class="token function">MaterialPageRoute</span><span class="token punctuation">(</span> 
+            builder<span class="token operator">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">pageContentBuilder</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> arguments<span class="token operator">:</span> settings<span class="token punctuation">.</span>arguments<span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token keyword">return</span> route<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token string">'routes/Routes.dart'</span><span class="token punctuation">;</span> 
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">MyApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">class</span> <span class="token class-name">MyApp</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@override</span>
+    Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">return</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span> 
+            <span class="token comment" spellcheck="true">// home:Tabs(), </span>
+            initialRoute<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> 
+            onGenerateRoute<span class="token operator">:</span> onGenerateRoute 
+        <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span></code></pre>
+<h4 id="17-5-路由-路由替换-返回到根路由"><a href="#17-5-路由-路由替换-返回到根路由" class="headerlink" title="17.5    路由 路由替换 返回到根路由"></a>17.5    路由 路由替换 返回到根路由</h4><h5 id="17-5-1-返回到上一页"><a href="#17-5-1-返回到上一页" class="headerlink" title="17.5.1    返回到上一页"></a>17.5.1    返回到上一页</h5><pre class=" language-java"><code class="language-java">Navigator<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h5 id="17-5-2-替换路由"><a href="#17-5-2-替换路由" class="headerlink" title="17.5.2    替换路由"></a>17.5.2    替换路由</h5><blockquote>
+<p>比如我们从用户中心页面跳转到了 registerFirst 页面，然后从 registerFirst 页面通过 </p>
+<p>pushReplacementNamed 跳转到了 registerSecond 页面。这个时候当我们点击 registerSecond </p>
+<p>的返回按钮的时候它会直接返回到用户中心</p>
+</blockquote>
+<pre class=" language-java"><code class="language-java">Navigator<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pushReplacementNamed</span><span class="token punctuation">(</span><span class="token string">'/registerSecond'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h5 id="17-5-3-返回到根路由"><a href="#17-5-3-返回到根路由" class="headerlink" title="17.5.3    返回到根路由"></a>17.5.3    返回到根路由</h5><blockquote>
+<p>比如我们从用户中心跳转到 registerFirst 页面，然后从 registerFirst 页面跳转到 registerSecond </p>
+<p>页面，然后从 registerSecond 跳转到了 registerThird 页面。这个时候我们想的是 registerThird </p>
+<p>注册成功后返回到用户中心。 这个时候就用到了返回到根路由的方法。</p>
+</blockquote>
+<pre class=" language-java"><code class="language-java">Navigator<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pushAndRemoveUntil</span><span class="token punctuation">(</span> 
+    <span class="token keyword">new</span> <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>builder<span class="token operator">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">new</span> <span class="token class-name">Tabs</span><span class="token punctuation">(</span>index<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">)</span>
+                         <span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token punctuation">(</span>route<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> route <span class="token operator">==</span> null 
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="18-Appbar组件"><a href="#18-Appbar组件" class="headerlink" title="18.    Appbar组件"></a>18.    Appbar组件</h3><blockquote>
+<p>自定义顶部导航按钮图标、颜色 以及TabBar定义顶部 Tab</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">leading</td>
+<td align="center">在标题前面显示的一个控件，在首页通常显示应用的 logo；在其他界面通常显示为返回按钮</td>
+</tr>
+<tr>
+<td align="center">title</td>
+<td align="center">标题，通常显示为当前界面的标题文字，可以放组件</td>
+</tr>
+<tr>
+<td align="center">actions</td>
+<td align="center">通常使用 IconButton 来表示，可以放按钮组</td>
+</tr>
+<tr>
+<td align="center">bottom</td>
+<td align="center">通常放 tabBar，标题下面显示一个 Tab 导航栏</td>
+</tr>
+<tr>
+<td align="center">backgroundColor</td>
+<td align="center">导航背景颜色</td>
+</tr>
+<tr>
+<td align="center">iconTheme</td>
+<td align="center">图标样式</td>
+</tr>
+<tr>
+<td align="center">textTheme</td>
+<td align="center">文字样式</td>
+</tr>
+<tr>
+<td align="center">centerTitle</td>
+<td align="center">标题是否居中显示</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>AppBar 中自定义 TabBar 实现顶部 Tab 切换</p>
+</blockquote>
+<p><strong>TabBar</strong> <strong>常见属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">tabs</td>
+<td align="center">显示的标签内容，一般使用 Tab 对象,也可以是其他的 Widget</td>
+</tr>
+<tr>
+<td align="center">controller</td>
+<td align="center">TabController 对象</td>
+</tr>
+<tr>
+<td align="center">isScrollable</td>
+<td align="center">是否可滚动</td>
+</tr>
+<tr>
+<td align="center">indicatorColor</td>
+<td align="center">指示器颜色</td>
+</tr>
+<tr>
+<td align="center">indicatorWeight</td>
+<td align="center">指示器高度</td>
+</tr>
+<tr>
+<td align="center">indicatorPadding</td>
+<td align="center">底部指示器的 Padding</td>
+</tr>
+<tr>
+<td align="center">indicator</td>
+<td align="center">指示器 decoration，例如边框等</td>
+</tr>
+<tr>
+<td align="center">indicatorSize</td>
+<td align="center">指示器大小计算方式，TabBarIndicatorSize.label 跟文字等宽,TabBarIndicatorSize.tab 跟每个 tab 等宽</td>
+</tr>
+<tr>
+<td align="center">labelColor</td>
+<td align="center">选中 label 颜色</td>
+</tr>
+<tr>
+<td align="center">labelStyle</td>
+<td align="center">选中 label 的 Style</td>
+</tr>
+<tr>
+<td align="center">labelPadding</td>
+<td align="center">每个 label 的 padding 值</td>
+</tr>
+<tr>
+<td align="center">unselectedLabelColor</td>
+<td align="center">未选中 label 颜色</td>
+</tr>
+<tr>
+<td align="center">unselectedLabelStyle</td>
+<td align="center">未选中 label 的 Style</td>
+</tr>
+</tbody></table>
+<h3 id="19-Drawer侧边栏"><a href="#19-Drawer侧边栏" class="headerlink" title="19.    Drawer侧边栏"></a>19.    Drawer侧边栏</h3><blockquote>
+<p>在 Scaffold 组件里面传入 drawer 参数可以定义左侧边栏，传入 endDrawer 可以定义右侧边 </p>
+<p>栏。侧边栏默认是隐藏的，我们可以通过手指滑动显示侧边栏，也可以通过点击按钮显示侧 </p>
+<p>边栏。</p>
+</blockquote>
+<p><strong>DrawerHeader</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">decoration</td>
+<td align="center">设置顶部背景颜色</td>
+</tr>
+<tr>
+<td align="center">child</td>
+<td align="center">配置子元素</td>
+</tr>
+<tr>
+<td align="center">padding</td>
+<td align="center">内边距</td>
+</tr>
+<tr>
+<td align="center">margin</td>
+<td align="center">外边距</td>
+</tr>
+</tbody></table>
+<p><strong>UserAccountsDrawerHeader</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">decoration</td>
+<td align="center">设置顶部背景颜色</td>
+</tr>
+<tr>
+<td align="center">accountName</td>
+<td align="center">账户名称</td>
+</tr>
+<tr>
+<td align="center">accountEmail</td>
+<td align="center">账户邮箱</td>
+</tr>
+<tr>
+<td align="center">currentAccountPicture</td>
+<td align="center">用户头像</td>
+</tr>
+<tr>
+<td align="center">otherAccountsPictures</td>
+<td align="center">用来设置当前账户其他账户头像</td>
+</tr>
+<tr>
+<td align="center">margin</td>
+<td align="center">外边距</td>
+</tr>
+</tbody></table>
+<p><strong>侧边栏路由跳转</strong></p>
+<pre class=" language-java"><code class="language-java">onTap<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    Navigator<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    Navigator<span class="token punctuation">.</span><span class="token function">pushNamed</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token string">'/search'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span></code></pre>
+<h3 id="20-FloatingActionButton"><a href="#20-FloatingActionButton" class="headerlink" title="20.    FloatingActionButton"></a>20.    FloatingActionButton</h3><blockquote>
+<p><strong>FloatingActionButton 简称 FAB ,</strong>可以实现浮动按钮，也可以实现类似闲鱼 app 的地步凸 </p>
+<p>起导航 </p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">*<em>属性名称 *</em></th>
+<th align="center">属性值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">child</td>
+<td align="center">子视图，一般为 Icon，不推荐使用文字</td>
+</tr>
+<tr>
+<td align="center">tooltip</td>
+<td align="center">FAB 被长按时显示，也是无障碍功能</td>
+</tr>
+<tr>
+<td align="center">backgroundColor</td>
+<td align="center">背景颜色</td>
+</tr>
+<tr>
+<td align="center">elevation</td>
+<td align="center">未点击的时候的阴影</td>
+</tr>
+<tr>
+<td align="center">hignlightElevation</td>
+<td align="center">点击时阴影值，默认 12.0</td>
+</tr>
+<tr>
+<td align="center">onPressed</td>
+<td align="center">点击事件回调</td>
+</tr>
+<tr>
+<td align="center">shape</td>
+<td align="center">可以定义 FAB 的形状等</td>
+</tr>
+<tr>
+<td align="center">mini</td>
+<td align="center">是否是 mini 类型默认 false</td>
+</tr>
+</tbody></table>
+<h3 id="21-表单"><a href="#21-表单" class="headerlink" title="21.    表单"></a>21.    表单</h3><blockquote>
+<p>Flutter 中常见的表单有 TextField 单行文本框，TextField 多行文本框、CheckBox、Radio、Switch </p>
+<p>CheckboxListTile、RadioListTile、SwitchListTile、Slide</p>
+</blockquote>
+<h4 id="21-1-TextField"><a href="#21-1-TextField" class="headerlink" title="21.1    TextField"></a>21.1    TextField</h4><table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">maxLines</td>
+<td align="center">设置此参数可以把文本框改为多行文本框</td>
+</tr>
+<tr>
+<td align="center">onChanged</td>
+<td align="center">文本框改变的时候触发的事件</td>
+</tr>
+<tr>
+<td align="center">decoration</td>
+<td align="center"><strong>hintText</strong> 类似 html 中的 placeholder；<strong>border</strong> 配置文本框边框 OutlineInputBorder 配合使用；<strong>labelText</strong> lable 的名称；<strong>labelStyle</strong> 配置 lable 的样式</td>
+</tr>
+<tr>
+<td align="center">obscureText</td>
+<td align="center">把文本框框改为密码框</td>
+</tr>
+<tr>
+<td align="center">controller</td>
+<td align="center"><strong>controller</strong> 结合 TextEditingController()可以配置表单默认显示的内容</td>
+</tr>
+</tbody></table>
+<h4 id="21-2-CheckBox，CheckBoxListTitle"><a href="#21-2-CheckBox，CheckBoxListTitle" class="headerlink" title="21.2    CheckBox，CheckBoxListTitle"></a>21.2    CheckBox，CheckBoxListTitle</h4><p><strong>Checkbox</strong> <strong>常见属性</strong></p>
+<table>
+<thead>
+<tr>
+<th>*<em>属性 *</em></th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>value</td>
+<td>true 或者 false</td>
+</tr>
+<tr>
+<td>onChanged</td>
+<td>改变的时候触发的事件</td>
+</tr>
+<tr>
+<td>activeColor</td>
+<td>选中的颜色、背景颜色</td>
+</tr>
+<tr>
+<td>checkColor</td>
+<td>选中的颜色、Checkbox 里面对号的颜色</td>
+</tr>
+</tbody></table>
+<p><strong>CheckboxListTile</strong> <strong>常见属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">*<em>属性 *</em></th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">value</td>
+<td align="center">true 或者 false</td>
+</tr>
+<tr>
+<td align="center">onChanged</td>
+<td align="center">改变的时候触发的事件</td>
+</tr>
+<tr>
+<td align="center">activeColor</td>
+<td align="center">选中的颜色、背景颜色</td>
+</tr>
+<tr>
+<td align="center">title</td>
+<td align="center">标题</td>
+</tr>
+<tr>
+<td align="center">subtitle</td>
+<td align="center">二级标题</td>
+</tr>
+<tr>
+<td align="center">secondary</td>
+<td align="center">配置图标或者图片</td>
+</tr>
+<tr>
+<td align="center">selected</td>
+<td align="center">选中的时候文字颜色是否跟着改变</td>
+</tr>
+</tbody></table>
+<h4 id="21-3-Radio、RadioListTile"><a href="#21-3-Radio、RadioListTile" class="headerlink" title="21.3    Radio、RadioListTile"></a>21.3    Radio、RadioListTile</h4><p><strong>Radio</strong> <strong>常用属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">*<em>属性 *</em></th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">value</td>
+<td align="center">单选的值</td>
+</tr>
+<tr>
+<td align="center">onChanged</td>
+<td align="center">改变时触发</td>
+</tr>
+<tr>
+<td align="center">activeColor</td>
+<td align="center">选中的颜色、背景颜色</td>
+</tr>
+<tr>
+<td align="center">groupValue</td>
+<td align="center">选择组的值</td>
+</tr>
+</tbody></table>
+<p><strong>RadioListTile</strong> <strong>常用属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">value</td>
+<td align="center">true 或者 false</td>
+</tr>
+<tr>
+<td align="center">onChanged</td>
+<td align="center">改变的时候触发的事件</td>
+</tr>
+<tr>
+<td align="center">activeColor</td>
+<td align="center">选中的颜色、背景颜色</td>
+</tr>
+<tr>
+<td align="center">title</td>
+<td align="center">标题</td>
+</tr>
+<tr>
+<td align="center">subtitle</td>
+<td align="center">二级标题</td>
+</tr>
+<tr>
+<td align="center">secondary</td>
+<td align="center">配置图标或者图片</td>
+</tr>
+<tr>
+<td align="center">groupValue</td>
+<td align="center">选择组的值</td>
+</tr>
+</tbody></table>
+<h4 id="21-4-Switch开关"><a href="#21-4-Switch开关" class="headerlink" title="21.4    Switch开关"></a>21.4    Switch开关</h4><table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">value</td>
+<td align="center">单选的值</td>
+</tr>
+<tr>
+<td align="center">onChanged</td>
+<td align="center">改变时触发</td>
+</tr>
+<tr>
+<td align="center">activeColor</td>
+<td align="center">选中的颜色、背景颜色</td>
 </tr>
 </tbody></table>
 
