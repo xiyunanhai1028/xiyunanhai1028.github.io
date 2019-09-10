@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiyunanhai1028.github.io/"/>
-  <updated>2019-09-10T05:32:00.599Z</updated>
+  <updated>2019-09-10T10:00:57.076Z</updated>
   <id>https://xiyunanhai1028.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>底部导航</title>
+    <link href="https://xiyunanhai1028.github.io/2019/09/10/di-bu-dao-hang/"/>
+    <id>https://xiyunanhai1028.github.io/2019/09/10/di-bu-dao-hang/</id>
+    <published>2019-09-10T09:57:25.000Z</published>
+    <updated>2019-09-10T10:00:57.076Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot; language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token
+        
+      
+    
+    </summary>
+    
+      <category term="Flutter" scheme="https://xiyunanhai1028.github.io/categories/Flutter/"/>
+    
+    
+      <category term="Flutter底部导航" scheme="https://xiyunanhai1028.github.io/tags/Flutter%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>PMP学习</title>
@@ -104,7 +130,7 @@
     <link href="https://xiyunanhai1028.github.io/2019/08/23/typora-ji-ben-shi-yong/"/>
     <id>https://xiyunanhai1028.github.io/2019/08/23/typora-ji-ben-shi-yong/</id>
     <published>2019-08-23T08:43:53.000Z</published>
-    <updated>2019-08-23T08:47:50.310Z</updated>
+    <updated>2019-09-10T09:58:07.568Z</updated>
     
     <summary type="html">
     
