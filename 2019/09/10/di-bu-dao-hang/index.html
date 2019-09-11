@@ -5,12 +5,11 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="底部导航, Hexo">
-    <meta name="description" content="import &#39;package:flutter/material.dart&#39;;
+    <meta name="description" content="案例一：底部导航
+import &#39;package:flutter/material.dart&#39;;
 import &#39;widget/bottom_navigation_bar.dart&#39;;
 
-void main() =&gt; runApp(App());
-
-clas">
+void main() =&gt; runApp(App(">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -382,8 +381,8 @@ clas">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Flutter底部导航/" target="_blank">
-                                <span class="chip bg-color">Flutter底部导航</span>
+                            <a href="/tags/Flutter案例/" target="_blank">
+                                <span class="chip bg-color">Flutter案例</span>
                             </a>
                         
                     </div>
@@ -422,7 +421,8 @@ clas">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+                <h4 id="案例一：底部导航"><a href="#案例一：底部导航" class="headerlink" title="案例一：底部导航"></a>案例一：底部导航</h4><p><img src="https://strs-uat.oss-cn-hangzhou.aliyuncs.com/20190911/1568192332559.gif?Expires=1883552332&OSSAccessKeyId=LTAIrG3euwQPOIaA&Signature=GkecXzD%2B5foWhkzo8aGuo%2FRI3Bc%3D" alt="bottomNavigationBar"></p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">'widget/bottom_navigation_bar.dart'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -543,6 +543,183 @@ clas">
       <span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="案例二：Tab栏切换"><a href="#案例二：Tab栏切换" class="headerlink" title="案例二：Tab栏切换"></a>案例二：Tab栏切换</h4><p><img src="https://strs-uat.oss-cn-hangzhou.aliyuncs.com/20190911/1568191847646.gif?Expires=1883551847&OSSAccessKeyId=LTAIrG3euwQPOIaA&Signature=6G%2FstGLtsJBG1g827ZQoUyKVd8k%3D" alt="tabBar"></p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'widget/tab_widget.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+      debugShowCheckedModeBanner<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      home<span class="token operator">:</span> <span class="token function">TabWidget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TabWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  _TabWidgetState <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">_TabWidgetState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">_TabWidgetState</span> <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token operator">&lt;</span>TabWidget<span class="token operator">></span>
+    with SingleTickerProviderStateMixin <span class="token punctuation">{</span>
+  TabController _controller<span class="token punctuation">;</span>
+
+  <span class="token annotation punctuation">@override</span>
+  <span class="token keyword">void</span> <span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _controller <span class="token operator">=</span> <span class="token function">TabController</span><span class="token punctuation">(</span>length<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> vsync<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@override</span>
+  <span class="token keyword">void</span> <span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _controller<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token operator">:</span> <span class="token function">AppBar</span><span class="token punctuation">(</span>
+        title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"tabBar"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        centerTitle<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        bottom<span class="token operator">:</span> <span class="token function">TabBar</span><span class="token punctuation">(</span>controller<span class="token operator">:</span> _controller<span class="token punctuation">,</span> tabs<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token function">Tab</span><span class="token punctuation">(</span>icon<span class="token operator">:</span> <span class="token function">Icon</span><span class="token punctuation">(</span>Icons<span class="token punctuation">.</span>accessible<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token function">Tab</span><span class="token punctuation">(</span>icon<span class="token operator">:</span> <span class="token function">Icon</span><span class="token punctuation">(</span>Icons<span class="token punctuation">.</span>airplanemode_active<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token function">Tab</span><span class="token punctuation">(</span>icon<span class="token operator">:</span> <span class="token function">Icon</span><span class="token punctuation">(</span>Icons<span class="token punctuation">.</span>motorcycle<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token operator">:</span> <span class="token function">TabBarView</span><span class="token punctuation">(</span>controller<span class="token operator">:</span> _controller<span class="token punctuation">,</span> children<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token function">Center</span><span class="token punctuation">(</span>
+          child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"111"</span><span class="token punctuation">,</span>style<span class="token operator">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>fontSize<span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>color<span class="token operator">:</span> Colors<span class="token punctuation">.</span>redAccent<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token function">Center</span><span class="token punctuation">(</span>
+          child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"222"</span><span class="token punctuation">,</span>style<span class="token operator">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>fontSize<span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>color<span class="token operator">:</span> Colors<span class="token punctuation">.</span>greenAccent<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token function">Center</span><span class="token punctuation">(</span>
+          child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"333"</span><span class="token punctuation">,</span>style<span class="token operator">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>fontSize<span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>color<span class="token operator">:</span> Colors<span class="token punctuation">.</span>blue<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+      <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="案例三：页面进出场"><a href="#案例三：页面进出场" class="headerlink" title="案例三：页面进出场"></a>案例三：页面进出场</h4><p><img src="https://strs-uat.oss-cn-hangzhou.aliyuncs.com/20190911/1568192627033.gif?Expires=1883552627&OSSAccessKeyId=LTAIrG3euwQPOIaA&Signature=q%2BfPb3FCafNlENFQ6G7wZfg9Ym4%3D" alt="router"></p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'pages/first_page.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+      debugShowCheckedModeBanner<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      home<span class="token operator">:</span> <span class="token function">FirstPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'send_page.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'../widget/custom_route.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">FirstPage</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">Scaffold</span><span class="token punctuation">(</span>
+      backgroundColor<span class="token operator">:</span> Colors<span class="token punctuation">.</span>redAccent<span class="token punctuation">,</span>
+      appBar<span class="token operator">:</span> <span class="token function">AppBar</span><span class="token punctuation">(</span>
+        title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"页面一"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        centerTitle<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        elevation<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token operator">:</span> <span class="token function">Center</span><span class="token punctuation">(</span>
+        child<span class="token operator">:</span> <span class="token function">RaisedButton</span><span class="token punctuation">(</span>
+          onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Navigator<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">CustomRoute</span><span class="token punctuation">(</span><span class="token function">SendPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span>
+            <span class="token string">"我是第一个页面"</span><span class="token punctuation">,</span>
+            style<span class="token operator">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>fontSize<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SendPage</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">Scaffold</span><span class="token punctuation">(</span>
+      backgroundColor<span class="token operator">:</span> Colors<span class="token punctuation">.</span>greenAccent<span class="token punctuation">,</span>
+      appBar<span class="token operator">:</span> <span class="token function">AppBar</span><span class="token punctuation">(</span>
+        title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"页面二"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        centerTitle<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        elevation<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token operator">:</span> <span class="token function">Center</span><span class="token punctuation">(</span>
+        child<span class="token operator">:</span> <span class="token function">RaisedButton</span><span class="token punctuation">(</span>
+          onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Navigator<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span>
+            <span class="token string">"我是第二个页面"</span><span class="token punctuation">,</span>
+            style<span class="token operator">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>fontSize<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">CustomRoute</span> <span class="token keyword">extends</span> <span class="token class-name">PageRouteBuilder</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> Widget widget<span class="token punctuation">;</span>
+
+  <span class="token function">CustomRoute</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>widget<span class="token punctuation">)</span>
+      <span class="token operator">:</span> <span class="token keyword">super</span><span class="token punctuation">(</span>
+            pageBuilder<span class="token operator">:</span> <span class="token punctuation">(</span>BuildContext context<span class="token punctuation">,</span> Animation<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">></span> animation<span class="token punctuation">,</span>
+                Animation<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">></span> secondaryAnimation<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> widget<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token comment" spellcheck="true">//            transitionDuration: const Duration(seconds: 2),</span>
+            transitionsBuilder<span class="token operator">:</span> <span class="token punctuation">(</span>BuildContext context<span class="token punctuation">,</span>
+                Animation<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">></span> animation<span class="token punctuation">,</span>
+                Animation<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">></span> secondaryAnimation<span class="token punctuation">,</span>
+                Widget child<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token comment" spellcheck="true">//渐变</span>
+<span class="token comment" spellcheck="true">//              return FadeTransition(</span>
+<span class="token comment" spellcheck="true">//                  opacity: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(</span>
+<span class="token comment" spellcheck="true">//                      parent: animation, curve: Curves.fastOutSlowIn)),</span>
+<span class="token comment" spellcheck="true">//                  child: child);</span>
+
+              <span class="token comment" spellcheck="true">//缩放+旋转</span>
+<span class="token comment" spellcheck="true">//              return ScaleTransition(</span>
+<span class="token comment" spellcheck="true">//                scale: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(</span>
+<span class="token comment" spellcheck="true">//                    parent: animation, curve: Curves.fastOutSlowIn)),</span>
+<span class="token comment" spellcheck="true">//                child: RotationTransition(</span>
+<span class="token comment" spellcheck="true">//                  turns: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(</span>
+<span class="token comment" spellcheck="true">//                      parent: animation, curve: Curves.fastOutSlowIn)),</span>
+<span class="token comment" spellcheck="true">//                  child: child,</span>
+<span class="token comment" spellcheck="true">//                ),</span>
+<span class="token comment" spellcheck="true">//              );</span>
+
+              <span class="token comment" spellcheck="true">//平移</span>
+              <span class="token keyword">return</span> <span class="token function">SlideTransition</span><span class="token punctuation">(</span>
+                position<span class="token operator">:</span> Tween<span class="token operator">&lt;</span>Offset<span class="token operator">></span><span class="token punctuation">(</span>
+                        begin<span class="token operator">:</span> <span class="token function">Offset</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">:</span> <span class="token function">Offset</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token function">CurvedAnimation</span><span class="token punctuation">(</span>
+                        parent<span class="token operator">:</span> animation<span class="token punctuation">,</span> curve<span class="token operator">:</span> Curves<span class="token punctuation">.</span>fastOutSlowIn<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                child<span class="token operator">:</span> child<span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 
             </div>
@@ -761,7 +938,7 @@ clas">
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Flutter底部导航
+                            Flutter案例
                         
                     </div>
                     <div class="publish-info">
@@ -784,8 +961,8 @@ clas">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Flutter底部导航/" target="_blank">
-                        <span class="chip bg-color">Flutter底部导航</span>
+                    <a href="/tags/Flutter案例/" target="_blank">
+                        <span class="chip bg-color">Flutter案例</span>
                     </a>
                     
                 </div>
