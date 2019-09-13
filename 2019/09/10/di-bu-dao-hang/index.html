@@ -721,7 +721,259 @@ void main() =&gt; runApp(App(">
               <span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
+<h4 id="案例四：搜索"><a href="#案例四：搜索" class="headerlink" title="案例四：搜索"></a>案例四：搜索</h4><pre class=" language-java"><code class="language-java">List<span class="token operator">&lt;</span>String<span class="token operator">></span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"张可欣"</span><span class="token punctuation">,</span> <span class="token string">"张无忌"</span><span class="token punctuation">,</span> <span class="token string">"张翠山"</span><span class="token punctuation">,</span> <span class="token string">"宋远桥"</span><span class="token punctuation">,</span> <span class="token string">"宋青书"</span><span class="token punctuation">,</span> <span class="token string">"王鸥"</span><span class="token punctuation">,</span> <span class="token string">"王健林"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
+<span class="token keyword">const</span> defaultData <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"帅哥"</span><span class="token punctuation">,</span> <span class="token string">"靓妹"</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'widget/search_bar_widget.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+      debugShowCheckedModeBanner<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      home<span class="token operator">:</span> <span class="token function">SearchBarWidget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'../data/search_data.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SearchBarWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  _SearchBarWidgetState <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">_SearchBarWidgetState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">_SearchBarWidgetState</span> <span class="token keyword">extends</span> <span class="token class-name">State</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token operator">:</span> <span class="token function">AppBar</span><span class="token punctuation">(</span>
+        title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"search"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        centerTitle<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        actions<span class="token operator">:</span> <span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token punctuation">[</span>
+          <span class="token function">IconButton</span><span class="token punctuation">(</span>
+              icon<span class="token operator">:</span> <span class="token function">Icon</span><span class="token punctuation">(</span>Icons<span class="token punctuation">.</span>search<span class="token punctuation">)</span><span class="token punctuation">,</span>
+              onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"张可欣"</span><span class="token punctuation">,</span> <span class="token string">"张无忌"</span><span class="token punctuation">,</span> <span class="token string">"张翠山"</span><span class="token punctuation">,</span> <span class="token string">"宋远桥"</span><span class="token punctuation">,</span> <span class="token string">"宋青书"</span><span class="token punctuation">,</span> <span class="token string">"王鸥"</span><span class="token punctuation">,</span> <span class="token string">"王健林"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token function">showSearch</span><span class="token punctuation">(</span>context<span class="token operator">:</span> context<span class="token punctuation">,</span> delegate<span class="token operator">:</span> <span class="token function">_SearchBarDelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token operator">:</span> <span class="token function">ListView</span><span class="token punctuation">(</span>
+        children<span class="token operator">:</span> <span class="token function">_ListItems</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  List<span class="token operator">&lt;</span>Widget<span class="token operator">></span> <span class="token function">_ListItems</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    List<span class="token operator">&lt;</span>Widget<span class="token operator">></span> items <span class="token operator">=</span> <span class="token function">List</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    list<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+          items<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token function">ListTile</span><span class="token punctuation">(</span>
+            title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> items<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">_SearchBarDelegate</span> <span class="token keyword">extends</span> <span class="token class-name">SearchDelegate</span><span class="token operator">&lt;</span>String<span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  List<span class="token operator">&lt;</span>Widget<span class="token operator">></span> <span class="token function">buildActions</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>
+      <span class="token function">IconButton</span><span class="token punctuation">(</span>
+          icon<span class="token operator">:</span> <span class="token function">Icon</span><span class="token punctuation">(</span>Icons<span class="token punctuation">.</span>clear<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            query <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+            <span class="token function">close</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">buildLeading</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">IconButton</span><span class="token punctuation">(</span>
+        icon<span class="token operator">:</span> <span class="token function">Icon</span><span class="token punctuation">(</span>Icons<span class="token punctuation">.</span>arrow_back<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">close</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">buildResults</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">close</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">ListTile</span><span class="token punctuation">(</span>
+      title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">buildSuggestions</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">final</span> data <span class="token operator">=</span> query<span class="token punctuation">.</span>isEmpty
+        <span class="token operator">?</span> defaultData
+        <span class="token operator">:</span> list<span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">ListView</span><span class="token punctuation">(</span>
+      children<span class="token operator">:</span> <span class="token function">_ListItems</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  List<span class="token operator">&lt;</span>Widget<span class="token operator">></span> <span class="token function">_ListItems</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>String<span class="token operator">></span> data<span class="token punctuation">,</span> BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    List<span class="token operator">&lt;</span>Widget<span class="token operator">></span> items <span class="token operator">=</span> <span class="token function">List</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+          items<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token function">ListTile</span><span class="token punctuation">(</span>
+            onTap<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              query <span class="token operator">=</span> item<span class="token punctuation">;</span>
+              list <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>t<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token function">close</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            title<span class="token operator">:</span> <span class="token function">RichText</span><span class="token punctuation">(</span>
+                text<span class="token operator">:</span> <span class="token function">TextSpan</span><span class="token punctuation">(</span>
+                    text<span class="token operator">:</span> item<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> query<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    style<span class="token operator">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>
+                        color<span class="token operator">:</span> Colors<span class="token punctuation">.</span>black<span class="token punctuation">,</span> fontWeight<span class="token operator">:</span> FontWeight<span class="token punctuation">.</span>bold<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+                  <span class="token function">TextSpan</span><span class="token punctuation">(</span>
+                      text<span class="token operator">:</span> item<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>query<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                      style<span class="token operator">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>color<span class="token operator">:</span> Colors<span class="token punctuation">.</span>grey<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> items<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="案例五：ExpansionTitle"><a href="#案例五：ExpansionTitle" class="headerlink" title="案例五：ExpansionTitle"></a>案例五：ExpansionTitle</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'widget/expansion_widget.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+      debugShowCheckedModeBanner<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      home<span class="token operator">:</span> <span class="token function">ExpansionWidget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">"sex"</span><span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ExpansionWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token operator">:</span> <span class="token function">AppBar</span><span class="token punctuation">(</span>
+        title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"Expansion"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        centerTitle<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token operator">:</span> <span class="token function">ListView</span><span class="token punctuation">(</span>
+        children<span class="token operator">:</span> <span class="token function">_listViewItems</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  List<span class="token operator">&lt;</span>Widget<span class="token operator">></span> <span class="token function">_listViewItems</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    List<span class="token operator">&lt;</span>Widget<span class="token operator">></span> items <span class="token operator">=</span> List<span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+          items<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token function">ExpansionTile</span><span class="token punctuation">(</span>
+            leading<span class="token operator">:</span> <span class="token function">Icon</span><span class="token punctuation">(</span>Icons<span class="token punctuation">.</span>airplanemode_active<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token string">"name"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token punctuation">[</span>
+              <span class="token function">ListTile</span><span class="token punctuation">(</span>
+                title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                subtitle<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token string">"sex"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> items<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="案例六：贝瑟尔曲线使用"><a href="#案例六：贝瑟尔曲线使用" class="headerlink" title="案例六：贝瑟尔曲线使用"></a>案例六：贝瑟尔曲线使用</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'widget/clipper_widget.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+      debugShowCheckedModeBanner<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      home<span class="token operator">:</span> <span class="token function">ClipperWidget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token string">'package:flutter/material.dart'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ClipperWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Widget <span class="token function">build</span><span class="token punctuation">(</span>BuildContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token operator">:</span> <span class="token function">AppBar</span><span class="token punctuation">(</span>
+        title<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">"贝瑟尔曲线一"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        centerTitle<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token operator">:</span> <span class="token function">ClipPath</span><span class="token punctuation">(</span>
+        clipper<span class="token operator">:</span> <span class="token function">BottomClipper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        child<span class="token operator">:</span> <span class="token function">Container</span><span class="token punctuation">(</span>height<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span> color<span class="token operator">:</span> Colors<span class="token punctuation">.</span>blue<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">BottomClipper</span> <span class="token keyword">extends</span> <span class="token class-name">CustomClipper</span><span class="token operator">&lt;</span>Path<span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@override</span>
+  Path <span class="token function">getClip</span><span class="token punctuation">(</span>Size size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    var path <span class="token operator">=</span> <span class="token function">Path</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    path<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    path<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> size<span class="token punctuation">.</span>height <span class="token operator">-</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    var firstControlPath <span class="token operator">=</span> <span class="token function">Offset</span><span class="token punctuation">(</span>size<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">,</span> size<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    var firstEndPath <span class="token operator">=</span> <span class="token function">Offset</span><span class="token punctuation">(</span>size<span class="token punctuation">.</span>width<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> size<span class="token punctuation">.</span>height <span class="token operator">-</span> <span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    path<span class="token punctuation">.</span><span class="token function">quadraticBezierTo</span><span class="token punctuation">(</span>firstControlPath<span class="token punctuation">.</span>dx<span class="token punctuation">,</span> firstControlPath<span class="token punctuation">.</span>dy<span class="token punctuation">,</span>
+        firstEndPath<span class="token punctuation">.</span>dx<span class="token punctuation">,</span> firstEndPath<span class="token punctuation">.</span>dy<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    var secondControlPath <span class="token operator">=</span> <span class="token function">Offset</span><span class="token punctuation">(</span>size<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">4</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">,</span> size<span class="token punctuation">.</span>height<span class="token operator">-</span><span class="token number">70</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    var secondEndPath <span class="token operator">=</span> <span class="token function">Offset</span><span class="token punctuation">(</span>size<span class="token punctuation">.</span>width<span class="token punctuation">,</span> size<span class="token punctuation">.</span>height <span class="token operator">-</span> <span class="token number">65</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    path<span class="token punctuation">.</span><span class="token function">quadraticBezierTo</span><span class="token punctuation">(</span>secondControlPath<span class="token punctuation">.</span>dx<span class="token punctuation">,</span> secondControlPath<span class="token punctuation">.</span>dy<span class="token punctuation">,</span>
+        secondEndPath<span class="token punctuation">.</span>dx<span class="token punctuation">,</span> secondEndPath<span class="token punctuation">.</span>dy<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    path<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span>size<span class="token punctuation">.</span>width<span class="token punctuation">,</span> size<span class="token punctuation">.</span>height <span class="token operator">-</span> <span class="token number">65</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    path<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span>size<span class="token punctuation">.</span>width<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> path<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@override</span>
+  bool <span class="token function">shouldReclip</span><span class="token punctuation">(</span>CustomClipper<span class="token operator">&lt;</span>Path<span class="token operator">></span> oldClipper<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// TODO: implement shouldReclip</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="案例七：启动页"><a href="#案例七：启动页" class="headerlink" title="案例七：启动页"></a>案例七：启动页</h4>
             </div>
             <hr/>
 
@@ -921,48 +1173,45 @@ void main() =&gt; runApp(App(">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/09/10/di-bu-dao-hang/">
+                <a href="/2019/09/12/java8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="底部导航">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Java8">
                         
-                        <span class="card-title">底部导航</span>
+                        <span class="card-title">Java8</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Flutter案例
+                            1.    Lambda1.1    基本语法：
+Java8中引入了一个新的操作符-&gt;  该操作符称为箭头操作符或Lambda操作符
+
+箭头操作符将Lambda表达式拆分成两部分：左侧：Lambda表达式的参数列表；右侧：Lambda
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-10
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-12
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Flutter/" class="post-category" target="_blank">
-                                    Flutter
-                                </a>
-                            
+                            <i class="fa fa-user fa-fw"></i>
+                            John Doe
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Flutter案例/" target="_blank">
-                        <span class="chip bg-color">Flutter案例</span>
+                    <a href="/tags/Java8/" target="_blank">
+                        <span class="chip bg-color">Java8</span>
                     </a>
                     
                 </div>
