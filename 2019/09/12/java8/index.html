@@ -630,6 +630,53 @@ List<span class="token operator">&lt;</span>Person<span class="token operator">>
 <span class="token punctuation">}</span></code></pre>
 </li>
 </ul>
+<p>其他接口：</p>
+<table>
+<thead>
+<tr>
+<th>函数式接口</th>
+<th>参数类型</th>
+<th>返回类型</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BiFunction&lt;T,U,R&gt;</td>
+<td>T,U</td>
+<td>R</td>
+<td>对类型为T,U参数应用操作，返回R类型的结果。包含方法为R  apply(T t,U u);</td>
+</tr>
+<tr>
+<td>UnaryOperator<t>        (Function子接口)</t></td>
+<td>T</td>
+<td>T</td>
+<td>对类型为T的对象进行一元运算，并返回T类型的结果。包含方法为T  apply(T t);</td>
+</tr>
+<tr>
+<td>BinaryOperator<t>       (BiFunction子接口)</t></td>
+<td>T,T</td>
+<td>T</td>
+<td>对类型为T的对象进行二元计算，并返回T类型的结果。包含方法为T apply(T t1,T t2)</td>
+</tr>
+<tr>
+<td>ToIntFunction<t>, ToLongFunction<t>, ToDoubleFunction<t></t></t></t></td>
+<td>T</td>
+<td>int long    double</td>
+<td>分别计算int,long,double值得函数</td>
+</tr>
+<tr>
+<td>BiConsumer&lt;T,U&gt;</td>
+<td>T,U</td>
+<td>void</td>
+<td>对类型为T,U参数应用操作。包含方法为void accept(T t,U u)</td>
+</tr>
+<tr>
+<td>IntFunction<r>      LongFunction<r>      DoubleFunction<r></r></r></r></td>
+<td>int    long  double</td>
+<td>R</td>
+<td>参数分类为int,long,double类型的函数</td>
+</tr>
+</tbody></table>
 <h5 id="1-4-方法引用："><a href="#1-4-方法引用：" class="headerlink" title="1.4    方法引用："></a>1.4    方法引用：</h5><blockquote>
 <p>如Lambda体中的内容有方法已经实现了，我们可以使用<code>方法引用</code>(可以理解为方法引用是Lambda表达式的另一种表现形式)</p>
 </blockquote>
@@ -728,6 +775,66 @@ List<span class="token operator">&lt;</span>Person<span class="token operator">>
     Function<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> fn<span class="token operator">=</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">:</span><span class="token operator">:</span><span class="token keyword">new</span><span class="token punctuation">;</span>
     String<span class="token punctuation">[</span><span class="token punctuation">]</span> apply <span class="token operator">=</span> fn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
+<h4 id="2-Stream流"><a href="#2-Stream流" class="headerlink" title="2.    Stream流"></a>2.    Stream流</h4><h5 id="2-1-什么是Steam"><a href="#2-1-什么是Steam" class="headerlink" title="2.1.    什么是Steam?"></a>2.1.    什么是Steam?</h5><ul>
+<li>是数据渠道，用于操作数据源（集合，数组等）所生成的元素序列</li>
+<li>集合讲的是数据，流讲的是计算</li>
+</ul>
+<p>==注意：==</p>
+<p>①Stream自己不会存储元素</p>
+<p>②Stream不会改变源对象。相反，他们会返回一个特有结果的新Stream</p>
+<p>③Stream操作是延迟执行的。这意味着他们会等到需要结果的时候才执行</p>
+<h5 id="2-2-Stream三步操作："><a href="#2-2-Stream三步操作：" class="headerlink" title="2.2.    Stream三步操作："></a>2.2.    Stream三步操作：</h5><ul>
+<li><ol>
+<li>创建Stream</li>
+<li>中间操作</li>
+<li>终止操作</li>
+</ol>
+</li>
+</ul>
+<h5 id="2-3-创建Stream有四种方式"><a href="#2-3-创建Stream有四种方式" class="headerlink" title="2.3.    创建Stream有四种方式"></a>2.3.    创建Stream有四种方式</h5><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//1，通过集合创建Stream</span>
+List<span class="token operator">&lt;</span>String<span class="token operator">></span> list<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Stream<span class="token operator">&lt;</span>String<span class="token operator">></span> stream <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//2，通过Arrays中的静态方法</span>
+Person<span class="token punctuation">[</span><span class="token punctuation">]</span> p<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+Stream<span class="token operator">&lt;</span>Person<span class="token operator">></span> personStream <span class="token operator">=</span> Arrays<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//3，通过Stream中的静态方法of</span>
+Stream<span class="token operator">&lt;</span>String<span class="token operator">></span> stringStream <span class="token operator">=</span> Stream<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"李四"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//4，创建无限流</span>
+<span class="token comment" spellcheck="true">//迭代</span>
+Stream<span class="token operator">&lt;</span>Integer<span class="token operator">></span> iterate <span class="token operator">=</span> Stream<span class="token punctuation">.</span><span class="token function">iterate</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> x <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//生成</span>
+Stream<span class="token operator">&lt;</span>Double<span class="token operator">></span> generate <span class="token operator">=</span> Stream<span class="token punctuation">.</span><span class="token function">generate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h5 id="2-4-Stream中间操作"><a href="#2-4-Stream中间操作" class="headerlink" title="2.4    Stream中间操作"></a>2.4    Stream中间操作</h5><blockquote>
+<p>多个中间操作可以连接起来形成一个流水线，除非流水线上触发终止操作，否则中间操作不会执行热河的处理。而在终止操作时一次性全部处理，称为“惰性求值”</p>
+</blockquote>
+<p>筛选与切片：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>filter(Predicate p)</td>
+<td>接收Lambda，从流中排除某些元素</td>
+</tr>
+<tr>
+<td>disinct()</td>
+<td>筛选，通过流所生成元素的hashCode()和equals()去除重复元素</td>
+</tr>
+<tr>
+<td>limit(long maxSize)</td>
+<td>截断流，使其元素不超过给定数量</td>
+</tr>
+<tr>
+<td>skip(long n)</td>
+<td>跳过元素，返回一个扔掉了前n个元素的流。若流中元素不足n个，则返回一个空流。与limit(n)互补</td>
+</tr>
+</tbody></table>
 
             </div>
             <hr/>
@@ -928,33 +1035,29 @@ List<span class="token operator">&lt;</span>Person<span class="token operator">>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/09/12/java8/">
+                <a href="/2019/09/14/pmp-cuo-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Java8">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="PMP错题">
                         
-                        <span class="card-title">Java8</span>
+                        <span class="card-title">PMP错题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.    Lambda1.1    基本语法：
-Java8中引入了一个新的操作符-&gt;  该操作符称为箭头操作符或Lambda操作符
-
-箭头操作符将Lambda表达式拆分成两部分：左侧：Lambda表达式的参数列表；右侧：Lambda
+                            1、 [单选] 某家公司把项目分为A，B，C三组。A组项目将为公司开拓新的业务领域，B组项目非常成熟，是公司利润主要来源，C组项目所处行业正在萎缩，公司给三组项目设定不同的优先级，并按这个优先级分配资源。这是什么管理活动？A company
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-12
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -962,15 +1065,6 @@ Java8中引入了一个新的操作符-&gt;  该操作符称为箭头操作符�
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java8/" target="_blank">
-                        <span class="chip bg-color">Java8</span>
-                    </a>
-                    
                 </div>
                 
             </div>
