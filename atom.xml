@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiyunanhai1028.github.io/"/>
-  <updated>2019-09-14T08:08:54.506Z</updated>
+  <updated>2019-09-26T07:38:04.316Z</updated>
   <id>https://xiyunanhai1028.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>&#39;es6学习&#39;</title>
+    <link href="https://xiyunanhai1028.github.io/2019/09/26/es6-xue-xi/"/>
+    <id>https://xiyunanhai1028.github.io/2019/09/26/es6-xue-xi/</id>
+    <published>2019-09-26T07:14:59.000Z</published>
+    <updated>2019-09-26T07:38:04.316Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-babel安装：&quot;&gt;&lt;a href=&quot;#1-babel安装：&quot; class=&quot;headerlink&quot; title=&quot;1.    babel安装：&quot;&gt;&lt;/a&gt;1.    babel安装：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;全局安装：npm install -g
+        
+      
+    
+    </summary>
+    
+      <category term="es6" scheme="https://xiyunanhai1028.github.io/categories/es6/"/>
+    
+    
+      <category term="es6" scheme="https://xiyunanhai1028.github.io/tags/es6/"/>
+    
+      <category term="html" scheme="https://xiyunanhai1028.github.io/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PMP错题</title>
     <link href="https://xiyunanhai1028.github.io/2019/09/14/pmp-cuo-ti/"/>
     <id>https://xiyunanhai1028.github.io/2019/09/14/pmp-cuo-ti/</id>
     <published>2019-09-14T07:59:03.000Z</published>
-    <updated>2019-09-14T08:08:54.506Z</updated>
+    <updated>2019-09-26T04:56:23.796Z</updated>
     
     <summary type="html">
     
@@ -89,11 +118,11 @@
   </entry>
   
   <entry>
-    <title>PMP学习</title>
+    <title></title>
     <link href="https://xiyunanhai1028.github.io/2019/09/09/pmp-xue-xi/"/>
     <id>https://xiyunanhai1028.github.io/2019/09/09/pmp-xue-xi/</id>
-    <published>2019-09-09T10:36:23.000Z</published>
-    <updated>2019-09-14T08:03:51.012Z</updated>
+    <published>2019-09-09T10:36:23.450Z</published>
+    <updated>2019-09-26T04:52:07.416Z</updated>
     
     <summary type="html">
     
@@ -101,16 +130,12 @@
       
         
         
-          &lt;h3 id=&quot;项目定义：&quot;&gt;&lt;a href=&quot;#项目定义：&quot; class=&quot;headerlink&quot;
+          &lt;h3 id=&quot;1-引论&quot;&gt;&lt;a href=&quot;#1-引论&quot; class=&quot;headerlink&quot; title=&quot;1.    引论&quot;&gt;&lt;/a&gt;1.    引论&lt;/h3&gt;&lt;h4 id=&quot;1-1-项目定义：&quot;&gt;&lt;a href=&quot;#1-1-项目定义：&quot;
         
       
     
     </summary>
     
-      <category term="PMP" scheme="https://xiyunanhai1028.github.io/categories/PMP/"/>
-    
-    
-      <category term="PMP" scheme="https://xiyunanhai1028.github.io/tags/PMP/"/>
     
   </entry>
   
