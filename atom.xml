@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiyunanhai1028.github.io/"/>
-  <updated>2019-10-15T05:43:25.993Z</updated>
+  <updated>2019-10-24T07:26:41.820Z</updated>
   <id>https://xiyunanhai1028.github.io/</id>
   
   <author>
@@ -17,16 +17,106 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>微信公众号学习</title>
+    <link href="https://xiyunanhai1028.github.io/2019/10/23/wei-xin-gong-zhong-hao-xue-xi/"/>
+    <id>https://xiyunanhai1028.github.io/2019/10/23/wei-xin-gong-zhong-hao-xue-xi/</id>
+    <published>2019-10-23T05:41:21.000Z</published>
+    <updated>2019-10-24T07:26:41.820Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-微信公众号简介&quot;&gt;&lt;a href=&quot;#1-微信公众号简介&quot; class=&quot;headerlink&quot; title=&quot;1.    微信公众号简介&quot;&gt;&lt;/a&gt;1.    微信公众号简介&lt;/h3&gt;&lt;h4 id=&quot;1-1-微信公众号是什么&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="wechat" scheme="https://xiyunanhai1028.github.io/categories/wechat/"/>
+    
+    
+      <category term="wechat" scheme="https://xiyunanhai1028.github.io/tags/wechat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vuex学习</title>
+    <link href="https://xiyunanhai1028.github.io/2019/10/21/vuex-xue-xi/"/>
+    <id>https://xiyunanhai1028.github.io/2019/10/21/vuex-xue-xi/</id>
+    <published>2019-10-21T09:44:36.000Z</published>
+    <updated>2019-10-22T03:54:30.753Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-vuex理解&quot;&gt;&lt;a href=&quot;#1-vuex理解&quot; class=&quot;headerlink&quot; title=&quot;1.    vuex理解&quot;&gt;&lt;/a&gt;1.    vuex理解&lt;/h3&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="vuex" scheme="https://xiyunanhai1028.github.io/categories/vuex/"/>
+    
+    
+      <category term="vue" scheme="https://xiyunanhai1028.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue-router学习</title>
+    <link href="https://xiyunanhai1028.github.io/2019/10/21/vue-router-xue-xi/"/>
+    <id>https://xiyunanhai1028.github.io/2019/10/21/vue-router-xue-xi/</id>
+    <published>2019-10-21T06:00:01.000Z</published>
+    <updated>2019-10-21T07:47:44.251Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-理解&quot;&gt;&lt;a href=&quot;#1-理解&quot; class=&quot;headerlink&quot; title=&quot;1.    理解&quot;&gt;&lt;/a&gt;1.    理解&lt;/h3&gt;&lt;h4 id=&quot;1-1-说明&quot;&gt;&lt;a href=&quot;#1-1-说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="vue-router" scheme="https://xiyunanhai1028.github.io/categories/vue-router/"/>
+    
+    
+      <category term="vue" scheme="https://xiyunanhai1028.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue组件化编程</title>
     <link href="https://xiyunanhai1028.github.io/2019/10/15/vue-zu-jian-hua-bian-cheng/"/>
     <id>https://xiyunanhai1028.github.io/2019/10/15/vue-zu-jian-hua-bian-cheng/</id>
     <published>2019-10-15T05:43:25.000Z</published>
-    <updated>2019-10-15T05:43:25.993Z</updated>
+    <updated>2019-10-16T02:32:46.112Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-Vue扩展插件&quot;&gt;&lt;a href=&quot;#1-Vue扩展插件&quot; class=&quot;headerlink&quot; title=&quot;1.    Vue扩展插件&quot;&gt;&lt;/a&gt;1.   
+        
+      
+    
     </summary>
     
+      <category term="Vue组件化编程" scheme="https://xiyunanhai1028.github.io/categories/Vue%E7%BB%84%E4%BB%B6%E5%8C%96%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Vue" scheme="https://xiyunanhai1028.github.io/tags/Vue/"/>
     
   </entry>
   
@@ -90,7 +180,7 @@
     <link href="https://xiyunanhai1028.github.io/2019/09/14/pmp-cuo-ti/"/>
     <id>https://xiyunanhai1028.github.io/2019/09/14/pmp-cuo-ti/</id>
     <published>2019-09-14T07:59:03.000Z</published>
-    <updated>2019-10-14T09:28:38.609Z</updated>
+    <updated>2019-10-24T09:10:52.118Z</updated>
     
     <summary type="html">
     
@@ -162,7 +252,7 @@
     <link href="https://xiyunanhai1028.github.io/2019/09/09/pmp-xue-xi/"/>
     <id>https://xiyunanhai1028.github.io/2019/09/09/pmp-xue-xi/</id>
     <published>2019-09-09T10:36:23.450Z</published>
-    <updated>2019-10-15T04:39:21.308Z</updated>
+    <updated>2019-10-24T10:34:57.431Z</updated>
     
     <summary type="html">
     
