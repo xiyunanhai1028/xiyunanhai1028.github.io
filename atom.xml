@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiyunanhai1028.github.io/"/>
-  <updated>2019-10-24T07:26:41.820Z</updated>
+  <updated>2019-11-12T06:35:46.411Z</updated>
   <id>https://xiyunanhai1028.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>redux</title>
+    <link href="https://xiyunanhai1028.github.io/2019/11/12/redux/"/>
+    <id>https://xiyunanhai1028.github.io/2019/11/12/redux/</id>
+    <published>2019-11-12T02:27:27.000Z</published>
+    <updated>2019-11-12T06:35:46.411Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-redux使用&quot;&gt;&lt;a href=&quot;#1-redux使用&quot; class=&quot;headerlink&quot; title=&quot;1.    redux使用&quot;&gt;&lt;/a&gt;1.    redux使用&lt;/h3&gt;&lt;h4 id=&quot;1-1-redux理解&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>微信公众号学习</title>
@@ -180,7 +202,7 @@
     <link href="https://xiyunanhai1028.github.io/2019/09/14/pmp-cuo-ti/"/>
     <id>https://xiyunanhai1028.github.io/2019/09/14/pmp-cuo-ti/</id>
     <published>2019-09-14T07:59:03.000Z</published>
-    <updated>2019-10-24T09:10:52.118Z</updated>
+    <updated>2019-10-28T10:02:25.985Z</updated>
     
     <summary type="html">
     
@@ -252,7 +274,7 @@
     <link href="https://xiyunanhai1028.github.io/2019/09/09/pmp-xue-xi/"/>
     <id>https://xiyunanhai1028.github.io/2019/09/09/pmp-xue-xi/</id>
     <published>2019-09-09T10:36:23.450Z</published>
-    <updated>2019-10-24T10:34:57.431Z</updated>
+    <updated>2019-11-22T00:39:06.541Z</updated>
     
     <summary type="html">
     
@@ -354,6 +376,121 @@
       <category term="Typora" scheme="https://xiyunanhai1028.github.io/tags/Typora/"/>
     
       <category term="工具" scheme="https://xiyunanhai1028.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack入门</title>
+    <link href="https://xiyunanhai1028.github.io/2018/11/22/webpack-ru-men/"/>
+    <id>https://xiyunanhai1028.github.io/2018/11/22/webpack-ru-men/</id>
+    <published>2018-11-22T07:04:42.000Z</published>
+    <updated>2019-11-22T07:07:28.389Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;了解Webpack相关&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;什么是webpack&lt;ul&gt;
+&lt;li&gt;Webpack是一个模块打包器(bundler)。&lt;/li&gt;
+&lt;li&gt;在Webpack看来,
+        
+      
+    
+    </summary>
+    
+      <category term="webpack" scheme="https://xiyunanhai1028.github.io/categories/webpack/"/>
+    
+    
+      <category term="webpack" scheme="https://xiyunanhai1028.github.io/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gulp</title>
+    <link href="https://xiyunanhai1028.github.io/2018/09/13/gulp/"/>
+    <id>https://xiyunanhai1028.github.io/2018/09/13/gulp/</id>
+    <published>2018-09-13T05:11:25.000Z</published>
+    <updated>2019-11-22T07:24:28.028Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Gulp介绍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文主页: &lt;a href=&quot;http://www.gulpjs.com.cn/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Gulp" scheme="https://xiyunanhai1028.github.io/categories/Gulp/"/>
+    
+    
+      <category term="Gulp" scheme="https://xiyunanhai1028.github.io/tags/Gulp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Grunt</title>
+    <link href="https://xiyunanhai1028.github.io/2018/01/10/grunt/"/>
+    <id>https://xiyunanhai1028.github.io/2018/01/10/grunt/</id>
+    <published>2018-01-10T07:00:49.000Z</published>
+    <updated>2019-11-22T07:24:05.309Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Grunt介绍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文主页 : &lt;a href=&quot;http://www.gruntjs.net/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Grunt" scheme="https://xiyunanhai1028.github.io/categories/Grunt/"/>
+    
+    
+      <category term="Grunt" scheme="https://xiyunanhai1028.github.io/tags/Grunt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&#39;轻松玩转正则&#39;</title>
+    <link href="https://xiyunanhai1028.github.io/2017/11/21/qing-song-wan-zhuan-zheng-ze/"/>
+    <id>https://xiyunanhai1028.github.io/2017/11/21/qing-song-wan-zhuan-zheng-ze/</id>
+    <published>2017-11-21T09:44:36.000Z</published>
+    <updated>2019-12-19T09:07:24.329Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-什么是正则&quot;&gt;&lt;a href=&quot;#1-什么是正则&quot; class=&quot;headerlink&quot; title=&quot;1.    什么是正则&quot;&gt;&lt;/a&gt;1.   
+        
+      
+    
+    </summary>
+    
+      <category term="正则" scheme="https://xiyunanhai1028.github.io/categories/%E6%AD%A3%E5%88%99/"/>
+    
+    
+      <category term="正则" scheme="https://xiyunanhai1028.github.io/tags/%E6%AD%A3%E5%88%99/"/>
     
   </entry>
   
